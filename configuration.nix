@@ -112,6 +112,7 @@
     rust
     rust-analyzer
     typescript-language-server
+    prettier
     fd
     claude-code
     gcc
