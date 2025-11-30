@@ -10,6 +10,12 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  zramSwap = {
+    enable = true;
+    memoryPercent = 50;
+    algorithm = "zstd";
+  };
+
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
@@ -127,6 +133,9 @@
     inter
     nerd-fonts.iosevka
     nerd-fonts.jetbrains-mono
+
+    # misc
+    fastfetch
   ];
 
   system.stateVersion = "25.05";
