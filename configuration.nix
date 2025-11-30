@@ -109,8 +109,6 @@
     ripgrep
     gopls
     go
-    rust
-    rust-analyzer
     typescript-language-server
     prettier
     fd
