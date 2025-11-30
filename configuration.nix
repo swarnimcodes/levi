@@ -105,6 +105,7 @@
   environment.systemPackages = with pkgs; [
     # devel
     neovim
+    helix
     ripgrep
     fd
     claude-code
