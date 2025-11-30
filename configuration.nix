@@ -138,6 +138,11 @@
     fastfetch
   ];
 
+  # maintenance
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.settings.auto-optimise-store = true;
+
   system.stateVersion = "25.05";
 
 }
