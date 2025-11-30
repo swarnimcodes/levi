@@ -107,6 +107,11 @@
     neovim
     helix
     ripgrep
+    gopls
+    go
+    rust
+    rust-analyzer
+    typescript-language-server
     fd
     claude-code
     gcc
