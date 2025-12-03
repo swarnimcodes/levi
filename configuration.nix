@@ -45,12 +45,16 @@
   };
 
   services.printing.enable = false;
+  services.postgresql.enable = true;
   hardware.bluetooth.enable = true;
 
   # Intel GPU drivers and acceleration
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+    ];
   };
 
   # Font configuration
