@@ -119,26 +119,46 @@
     "flakes"
   ];
 
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     # devel
     neovim
     helix
-    ripgrep
     gopls
     go
     typescript-language-server
     prettier
+    clang-tools
     fd
     claude-code
+    python3
+    distrobox
     gcc
+    uv
     gnumake
     nodejs
-    fzf
+    pnpm
     nixd
     nixfmt-rfc-style
 
+    # tools
+    ripgrep
+    man-pages
+    fzf
+    wget
+    curl
+    aria2
+
     # communication
     discord
+    wireguard-tools
 
     # fonts
     inter
