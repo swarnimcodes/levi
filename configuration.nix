@@ -167,6 +167,9 @@
 
     # misc
     fastfetch
+    gpu-screen-recorder
+    gpu-screen-recorder-gtk
+    heroic
   ];
 
   # maintenance
