@@ -99,6 +99,7 @@
 
   # programs
   programs.firefox.enable = true;
+  programs.kdeconnect.enable = true;
   programs.git.enable = true;
   programs.obs-studio = {
     enable = true;
@@ -160,6 +161,7 @@
     # communication
     discord
     wireguard-tools
+    openvpn
 
     # fonts
     inter
