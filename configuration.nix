@@ -155,6 +155,7 @@
     wget
     curl
     aria2
+    qpdf
 
     # communication
     discord
