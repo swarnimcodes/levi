@@ -91,12 +91,19 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [ kdePackages.kate ];
+    packages = with pkgs; [
+      kdePackages.kate
+      kdePackages.dragon
+    ];
   };
 
   # programs
   programs.firefox.enable = true;
   programs.git.enable = true;
+  programs.obs-studio = {
+    enable = true;
+    plugins = [ pkgs.obs-studio-plugins.obs-vaapi ];
+  };
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
