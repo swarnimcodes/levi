@@ -134,11 +134,13 @@
 
   environment.systemPackages = with pkgs; [
     # devel
+    emacs
     neovim
     helix
     gopls
     go
     typescript-language-server
+    typescript
     prettier
     clang-tools
     fd
@@ -152,8 +154,17 @@
     pnpm
     nixd
     nixfmt-rfc-style
+    vscode-langservers-extracted
+    taplo
+    tailwindcss-language-server
+    typst
+    typstyle
 
     # tools
+    kdePackages.kdenlive
+    audacity
+    ffmpeg
+    yt-dlp
     ripgrep
     man-pages
     fzf
@@ -161,6 +172,9 @@
     curl
     aria2
     qpdf
+    jq
+    cloc
+    lazygit
 
     # communication
     discord
@@ -173,10 +187,15 @@
     nerd-fonts.jetbrains-mono
 
     # misc
+    gamemode
+    winetricks
+    protontricks
+    papirus-icon-theme
     fastfetch
     gpu-screen-recorder
     gpu-screen-recorder-gtk
     heroic
+
   ];
 
   # maintenance
