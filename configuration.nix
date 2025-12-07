@@ -102,6 +102,7 @@
 
   # programs
   programs.firefox.enable = true;
+  programs.starship.enable = true;
   programs.kdeconnect.enable = true;
   programs.git.enable = true;
   programs.obs-studio = {
