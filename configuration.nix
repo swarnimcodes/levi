@@ -37,8 +37,12 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.displayManager.sddm.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
+  services.system76-scheduler.enable = true;
 
   services.emacs.enable = true;
 
@@ -63,6 +67,12 @@
   # Font configuration
   fonts = {
     enableDefaultPackages = true;
+    packages = with pkgs; [
+      inter
+      nerd-fonts.iosevka
+      iosevka
+      nerd-fonts.jetbrains-mono
+    ];
     fontconfig = {
       enable = true;
       antialias = true;
@@ -133,6 +143,12 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # for cosmic
+    mission-center
+    cosmic-osd
+    cosmic-reader
+    cosmic-ext-tweaks
+
     # devel
     emacs
     neovim
@@ -180,11 +196,6 @@
     discord
     wireguard-tools
     openvpn
-
-    # fonts
-    inter
-    nerd-fonts.iosevka
-    nerd-fonts.jetbrains-mono
 
     # misc
     gamemode
